@@ -1,0 +1,26 @@
+Stundenbuch - Version 1.3
+
+Basis: Version 1.2. Alle bisherigen Funktionen bleiben erhalten.
+
+Neu in Version 1.3:
+- Die Menues stehen jetzt nebeneinander als Tab-Leiste (von links nach rechts) statt untereinander:
+  * Startseite bei laufendem Timer: Material | Taetigkeiten | Kollegen | Notiz
+  * Eintrag bearbeiten: Zeit | Material | Taetigkeiten | Kollegen | Notiz
+    (fuenf Tabs: die Leiste laesst sich bei Bedarf seitlich wischen)
+  * Eintragsuebersicht: Material | Taetigkeiten | Kollegen | Notiz (mit Projekt und Notiz)
+- Der aktive Tab ist weiss mit blauer Schrift, die anderen grau. Die Zahl hinter dem Namen zeigt die Anzahl.
+- Ein Tipp auf einen Tab zeigt seinen Inhalt darunter, ein zweiter Tipp auf denselben Tab schliesst ihn wieder.
+- "Mit auf der Baustelle" heisst im Tab jetzt "Kollegen".
+- Die Pfeile (>) bei den Zeilen entfallen.
+- Menue unten: "Version 1.3".
+
+Geaendert wurde nur: index.html
+Fotos/Icons, MP3-Dateien, manifest.webmanifest und sw.js bleiben unveraendert in deinem Ordner/Repository.
+
+So spielst du das Update ein:
+1. ZIP entpacken.
+2. index.html in den Ordner "Download Handy-Programm 2026" kopieren (die alte ersetzen).
+3. Bei GitHub im Stundenbuch-Repository: Add file > Upload files, index.html hochladen, "Commit changes".
+4. App einmal mit Internet oeffnen. Im Menue muss unten "Version 1.3" stehen.
+
+Vorher in der App unter Sichern und Wiederherstellen ein Backup speichern.
