@@ -111,6 +111,43 @@ button:active{filter:brightness(.94);transform:scale(.99)}
 .tab{flex:1 0 auto;padding:10px 12px;border-radius:11px;font-size:14px;font-weight:600;color:var(--mu);background:none;white-space:nowrap}
 .tab small{margin-left:5px;font-weight:500;opacity:.8}
 .tab.on{background:var(--cd);color:var(--pr);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+/* ===== 3D-Design: nur Optik, keine Funktionen ===== */
+:root{--hi:rgba(255,255,255,.38);--sh:rgba(15,30,60,.20);--e-pr:#1c4684;--e-gr:#2c8049;--e-rd:#a93a3a;--ce:color-mix(in srgb,var(--mu) 38%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--hi:rgba(255,255,255,.14);--sh:rgba(0,0,0,.55);--e-pr:#1a3a6c}}
+:root[data-theme="dark"]{--hi:rgba(255,255,255,.14);--sh:rgba(0,0,0,.55);--e-pr:#1a3a6c}
+.top{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(0,0,0,.14));box-shadow:0 4px 12px rgba(10,25,55,.35)}
+.card{background-image:linear-gradient(180deg,var(--hi),rgba(255,255,255,0) 40%);box-shadow:inset 0 1px 0 var(--hi),0 6px 14px var(--sh),0 1px 2px var(--sh)}
+.bt{padding:10px 12px 14px}
+.bt button,.btns button,.add button,.pb,.go,.st{--e:var(--e-pr);background-image:linear-gradient(180deg,var(--hi),rgba(255,255,255,0) 55%);border-radius:12px;box-shadow:0 4px 0 var(--e),0 8px 14px var(--sh);transition:transform .08s ease,box-shadow .08s ease,filter .12s ease}
+.go{--e:var(--e-gr)}.st{--e:var(--e-rd)}.pb{--e:var(--e-pr)}
+.btns .sec{background-image:none;box-shadow:0 3px 0 color-mix(in srgb,var(--rd) 45%,transparent)}
+.bt button:active,.btns button:active,.add button:active,.pb:active,.go:active,.st:active{transform:translateY(4px);box-shadow:0 0 0 var(--e),0 2px 4px var(--sh);filter:brightness(1.2) saturate(1.2)}
+.row{transition:background .12s ease}.row:active{background:color-mix(in srgb,var(--pr) 12%,var(--cd))}
+input:not([type=checkbox]):not([type=radio]):not([type=hidden]),select,textarea{box-shadow:inset 0 2px 4px rgba(15,30,60,.15);border-radius:10px}
+.chp,.dy,.sc button{background-image:linear-gradient(180deg,var(--hi),rgba(255,255,255,0) 60%);box-shadow:0 3px 0 var(--ce),0 5px 8px var(--sh);transition:transform .08s ease,box-shadow .08s ease,background-color .12s ease,color .12s ease}
+.chp:active,.dy:active,.sc button:active{transform:translateY(3px);box-shadow:0 0 0 var(--ce),0 1px 2px var(--sh);background-color:color-mix(in srgb,var(--pr) 24%,var(--bg));color:var(--pr)}
+.chp.on,.chp.pri,.dy.on{box-shadow:0 3px 0 var(--e-pr),0 5px 8px var(--sh)}
+.chp.on:active,.chp.pri:active,.dy.on:active{background-color:var(--pr);color:#fff;filter:brightness(1.2)}
+.chp.act{box-shadow:inset 0 0 0 2px var(--pr),0 3px 0 var(--ce),0 5px 8px var(--sh)}
+.tabs{background:color-mix(in srgb,var(--mu) 14%,var(--bg));box-shadow:inset 0 2px 5px rgba(15,30,60,.16)}
+.tab{transition:transform .08s ease,box-shadow .08s ease,background-color .12s ease,color .12s ease}
+.tab:active{background:color-mix(in srgb,var(--pr) 20%,transparent);color:var(--pr);transform:translateY(2px)}
+.tab.on{background:var(--pr);background-image:linear-gradient(180deg,var(--hi),rgba(255,255,255,0) 60%);color:#fff;box-shadow:0 3px 0 var(--e-pr),0 5px 9px var(--sh)}
+.tab.on:active{filter:brightness(1.2);color:#fff}
+.lm .dr{width:80%;max-width:330px;height:100%;overflow:auto;padding:0;border-radius:0 22px 22px 0;box-shadow:8px 0 28px rgba(0,0,0,.4)}
+.dr .drh{display:flex;align-items:center;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top,0px)) 14px 12px 18px;border-bottom:1px solid var(--ln)}
+.dr .drh b{font-size:22px}
+.lm .dr .drx{width:48px;height:48px;padding:0;margin:0;display:flex;align-items:center;justify-content:center;border-radius:14px;font-size:22px;background:var(--bg);box-shadow:0 3px 0 var(--ce),0 5px 8px var(--sh)}
+.lm .dr .drx:active{transform:translateY(3px);box-shadow:0 0 0 var(--ce);background:color-mix(in srgb,var(--rd) 22%,var(--bg))}
+.dr .drv{padding:10px 18px 2px;color:var(--mu);font-size:13px}
+.dr .drs{color:var(--mu);font-size:12px;letter-spacing:.06em;padding:16px 18px 4px}
+.lm .dr .dri{display:flex;align-items:center;gap:14px;width:auto;margin:5px 12px;padding:13px 14px;border-radius:14px;text-align:left;font-size:17px;font-weight:500;background:transparent;color:var(--tx);box-shadow:none;transition:background .12s ease,color .12s ease,transform .08s ease}
+.dr .dri .ic{font-size:22px;width:30px;text-align:center;filter:drop-shadow(0 2px 2px rgba(0,0,0,.28))}
+.lm .dr .dri:active{background:color-mix(in srgb,var(--pr) 20%,var(--cd));color:var(--pr);transform:translateY(2px)}
+.lm .dr .dri.cur{background:color-mix(in srgb,var(--pr) 12%,var(--cd));color:var(--pr);font-weight:700;box-shadow:inset 4px 0 0 var(--pr)}
+.lm button{box-shadow:0 3px 0 var(--ce);transition:transform .08s ease,box-shadow .08s ease,background-color .12s ease}
+.lm button:active{transform:translateY(3px);box-shadow:0 0 0 var(--ce);background-color:color-mix(in srgb,var(--pr) 20%,var(--bg))}
+.lm .rd{box-shadow:0 3px 0 var(--e-rd)}
 </style></head><body><div id="app"></div>
 <script>
 const $=s=>document.querySelector(s);
@@ -265,9 +302,9 @@ const bb=new Uint8Array(out.length);for(let i=0;i<out.length;i++)bb[i]=out.charC
 function lmenu(){const e=D.e.find(x=>x.id===V.lm);if(!e)return '';const p=P(e.pid)||{name:'?'},sm=`<p>${fday(e.start)} · ${ft(e.start)}–${ft(e.end)} · ${fd(edur(e))}</p>`;
 return V.ld?`<div class="lm" data-a="lmx"><div data-a="lmn"><h3>Eintrag wirklich löschen?</h3><p><b>${esc(p.name)}</b></p>${sm}<button data-a="lmx">Abbrechen</button><button class="rd" data-a="lmdy">Ja, löschen</button></div></div>`
 :`<div class="lm" data-a="lmx"><div data-a="lmn"><h3>${esc(p.name)}</h3>${sm}<button data-a="lme">Bearbeiten</button><button class="rd" data-a="lmd">Löschen</button><button data-a="lmx">Abbrechen</button></div></div>`}
-const VER='1.3';
-function drawer(){const it=(i,t)=>`<button data-a="go" data-i="${i}" style="text-align:left;border-radius:0;margin:0;background:none">${t}</button>`,h=t=>`<div style="color:var(--mu);font-size:12px;padding:14px 16px 2px">${t}</div>`;
-return `<div class="lm" data-a="mn" style="align-items:stretch;justify-content:flex-start"><div data-a="lmn" style="width:78%;max-width:320px;border-radius:0;height:100%;overflow:auto;padding:0"><div style="background:var(--pr);color:#fff;padding:22px 16px"><b style="font-size:18px">Stundenbuch</b><div style="opacity:.85;font-size:14px">${esc((D.ws||{}).name||'')}</div><div style="opacity:.7;font-size:12px;margin-top:2px">Version ${VER}</div></div>${it('home','Timer')}${h('ZEITEN')}<button data-a="enew" style="text-align:left;border-radius:0;margin:0;background:none">＋ Neuer Eintrag</button>${it('list','Einträge')}${it('proj','Projekte')}${h('BERICHTE')}${it('ex','Exportieren')}${it('wv','Vorschau Wochenbericht')}${it('ms','Materialschein')}${h('KONFIGURATION')}${it('set','Einstellungen')}${it('bk','Sichern und Wiederherstellen')}</div></div>`}
+const VER='1.4';
+function drawer(){const it=(i,t,ic)=>`<button class="dri ${V.v===i?'cur':''}" data-a="go" data-i="${i}"><span class="ic">${ic}</span>${t}</button>`,h=t=>`<div class="drs">${t}</div>`;
+return `<div class="lm" data-a="mn" style="align-items:stretch;justify-content:flex-start"><div class="dr" data-a="lmn"><div class="drh"><b>☰ Menü</b><button class="drx" data-a="mn" aria-label="Menü schließen">✕</button></div><div class="drv">Stundenbuch${(D.ws||{}).name?' · '+esc(D.ws.name):''} · Version ${VER}</div>${it('home','Timer','⏱️')}${h('ZEITEN')}<button class="dri" data-a="enew"><span class="ic">➕</span>Neuer Eintrag</button>${it('list','Einträge','📋')}${it('proj','Projekte','📁')}${h('BERICHTE')}${it('ex','Exportieren','📤')}${it('wv','Vorschau Wochenbericht','📄')}${it('ms','Materialschein','📦')}${h('KONFIGURATION')}${it('set','Einstellungen','⚙️')}${it('bk','Sichern und Wiederherstellen','💾')}</div></div>`}
 function wex(){const w=D.ws||{},ws=mon(V.xw||0),e=new Date(ws);e.setDate(e.getDate()+6);const to=(w.to||'').split('\n').filter(Boolean);
 return head('Exportieren',1)+`<div class="pad">${V.err?`<p class="err">${V.err}</p>`:''}<div class="card"><div class="lb">Wochenbericht (Arbeitseinteilung)</div><div class="pad"><div style="display:flex;align-items:center;gap:10px"><button data-a="xwp" style="font-size:24px">‹</button><b style="flex:1;text-align:center">KW ${wk(ws)} · ${ws.getDate()}.${ws.getMonth()+1}. – ${e.getDate()}.${e.getMonth()+1}.${e.getFullYear()}</b><button data-a="xwn" style="font-size:24px">›</button></div><div class="btns"><button data-a="go" data-i="wv" style="background:none;border:1px solid var(--pr);color:var(--pr)">Vorschau</button></div>${to.length?`<label>Empfänger<select id="wr">${to.map(x=>`<option>${esc(x)}</option>`).join('')}</select></label><p style="color:var(--mu);font-size:13px">Die Adresse wird kopiert. Wähle im Teilen-Menü Gmail und füge sie im Feld „An“ ein.</p>`:'<p style="color:var(--mu);font-size:13px">Empfänger kannst du unter Einstellungen hinterlegen.</p>'}<div class="btns"><button data-a="wbs">PDF erstellen und senden</button><button data-a="wpr">Drucken</button></div></div></div></div>`}
 function wprev(){const ws=mon(V.xw||0),z=(()=>{const q=new Date(ws);q.setDate(q.getDate()+6);return q})(),nv=`<div class="cr" style="padding:6px 14px 0"><button data-a="xwp">‹</button><b>KW ${wk(ws)} · ${ws.getDate()}.${ws.getMonth()+1}. – ${z.getDate()}.${z.getMonth()+1}.</b><button data-a="xwn">›</button></div>`,w=D.ws||{},E=wbents(ws),DT=['Mo','Di','Mi','Do','Fr','Sa','So'];let tot=0,h='';
